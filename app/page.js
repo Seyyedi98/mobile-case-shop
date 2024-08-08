@@ -22,7 +22,7 @@ export default function Home() {
               !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl"
               >
                 Your Image on a{" "}
-                <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
+                <span className="bg-rose-600 px-2 text-white">Custom</span>
                 Phone Case
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
@@ -34,15 +34,15 @@ export default function Home() {
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-green-600" />
+                    <Check className="h-5 w-5 shrink-0 text-rose-600" />
                     High-quality, durable material
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-green-600" />5 year
+                    <Check className="h-5 w-5 shrink-0 text-rose-600" />5 year
                     print guarantee
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-green-600" />
+                    <Check className="h-5 w-5 shrink-0 text-rose-600" />
                     Modern phones supported
                   </li>
                 </div>
@@ -89,11 +89,11 @@ export default function Home() {
 
                 <div className="flex flex-col justify-between items-center sm:items-start">
                   <div className="flex gap-0.5">
-                    <Star className="h-4 w-4 text-green-600 fill-green-600" />
-                    <Star className="h-4 w-4 text-green-600 fill-green-600" />
-                    <Star className="h-4 w-4 text-green-600 fill-green-600" />
-                    <Star className="h-4 w-4 text-green-600 fill-green-600" />
-                    <Star className="h-4 w-4 text-green-600 fill-green-600" />
+                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
+                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
+                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
+                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
+                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
                   </div>
                   <p>
                     <span className="font-semibold">1.250</span> happy customers
