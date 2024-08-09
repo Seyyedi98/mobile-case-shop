@@ -22,7 +22,7 @@ export default function Home() {
               !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl"
               >
                 Your Image on a{" "}
-                <span className="bg-rose-600 px-2 text-white">Custom</span>
+                <span className="bg-primary px-2 text-white">Custom</span>
                 Phone Case
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
@@ -34,15 +34,15 @@ export default function Home() {
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-rose-600" />
+                    <Check className="h-5 w-5 shrink-0 text-primary" />
                     High-quality, durable material
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-rose-600" />5 year
+                    <Check className="h-5 w-5 shrink-0 text-primary" />5 year
                     print guarantee
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
-                    <Check className="h-5 w-5 shrink-0 text-rose-600" />
+                    <Check className="h-5 w-5 shrink-0 text-primary" />
                     Modern phones supported
                   </li>
                 </div>
@@ -89,11 +89,11 @@ export default function Home() {
 
                 <div className="flex flex-col justify-between items-center sm:items-start">
                   <div className="flex gap-0.5">
-                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
-                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
-                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
-                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
-                    <Star className="h-4 w-4 text-rose-600 fill-rose-600" />
+                    <Star className="h-4 w-4 text-primary fill-primary" />
+                    <Star className="h-4 w-4 text-primary fill-primary" />
+                    <Star className="h-4 w-4 text-primary fill-primary" />
+                    <Star className="h-4 w-4 text-primary fill-primary" />
+                    <Star className="h-4 w-4 text-primary fill-primary" />
                   </div>
                   <p>
                     <span className="font-semibold">1.250</span> happy customers
@@ -119,6 +119,20 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+
+        {/* value proposition section */}
+        <section className="bg-slate-100 py-24">
+          <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+            <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+              <h2
+                className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight 
+              font-bold text-5xl md:text-6xl text-gray-900"
+              >
+                What our <span className="relative px-2">customers</span> say
+              </h2>
+            </div>
+          </MaxWidthWrapper>
+        </section>
       </section>
     </div>
   );
