@@ -4,7 +4,7 @@ import MaxWidthWrapper from "./_components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
 import Phone from "./_components/Phone";
 import { Icons } from "./_components/icons";
-import Reviews from "./_components/Reviews";
+import { Reviews } from "./_components/Reviews";
 
 export default function Home() {
   return (
