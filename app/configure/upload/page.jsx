@@ -36,7 +36,6 @@ const Page = () => {
               {...getRootProps()}
             >
               <input {...getInputProps()} />
-              test
             </div>
           )}
         </Dropzone>
