@@ -38,7 +38,7 @@ const Page = () => {
     });
   };
   const onDropAccepted = (acceptedFiles) => {
-    startUpload(acceptedFiles, { configId });
+    startUpload(acceptedFiles, { configId: undefined });
     setIsDragOver(false);
   };
 
