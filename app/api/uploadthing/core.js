@@ -25,15 +25,7 @@ export const ourFileRouter = {
       const imgMetadata = await sharp(buffer).metadata();
       const { width, height } = imgMetadata;
 
-      await prisma.configuration.create({
-        data: {
-          imageUrl: "saedfsdf",
-          height: 500,
-          width: 500,
-        },
-      });
-
-      if (!configId) {
+       if (!configId) {
         const configuration = await prisma.configuration.create({
           data: {
             imageUrl: file.url,
