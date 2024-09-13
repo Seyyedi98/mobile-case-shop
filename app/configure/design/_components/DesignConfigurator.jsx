@@ -26,8 +26,31 @@ import { Rnd } from "react-rnd";
 import HandleComponent from "./HandleComponent";
 import { useUploadThing } from "@/lib/uploadthing";
 import { toast } from "@/components/ui/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { saveConfig as _saveConfig } from "../actions";
+import { useRouter } from "next/navigation";
+import { color } from "framer-motion";
 
 const DesignConfigurator = ({ configId, imageUrl, imageDimensions }) => {
+  const router = useRouter();
+
+  const { mutate: saveConfig } = useMutation({
+    mutationKey: ["save-config"],
+    mutationFn: async (args) => {
+      await Promise.all([saveConfiguration(), _saveConfig(args)]);
+    },
+    onError: () => {
+      toast({
+        title: "Something went wrong",
+        description: "There was an error on our end, Please try again.",
+        variant: "destructive",
+      });
+    },
+    onSuccess: () => {
+      router.push(`/configure/preview?id?=${configId}`);
+    },
+  });
+
   // configId comes from database
   const [options, setOptions] = useState({
     color: COLORS[0],
@@ -371,7 +394,19 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }) => {
                 {(BASE_PRICE + options.finish.price + options.material.price) /
                   100}
               </p>
-              <Button size="sm" className="w-full" onClick={saveConfiguration}>
+              <Button
+                size="sm"
+                className="w-full"
+                onClick={() =>
+                  saveConfig({
+                    configId,
+                    color: options.color.value,
+                    finish: options.finish.value,
+                    material: options.material.value,
+                    model: options.model.value,
+                  })
+                }
+              >
                 Continue
                 <ArrowRight className="w-4 h-4 ml-1.5 inline" />
               </Button>
