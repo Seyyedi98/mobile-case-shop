@@ -46,7 +46,7 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }) => {
       });
     },
     onSuccess: () => {
-      router.push(`/configure/preview?id?=${configId}`);
+      router.push(`/configure/preview?id=${configId}`);
     },
   });
 
