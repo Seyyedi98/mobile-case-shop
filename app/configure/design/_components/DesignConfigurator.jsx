@@ -10,7 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "@/components/ui/use-toast";
 import { BASE_PRICE } from "@/config/products";
+import { useUploadThing } from "@/lib/uploadthing";
 import { cn } from "@/lib/utils";
 import {
   COLORS,
@@ -19,17 +21,14 @@ import {
   MODELS,
 } from "@/validators/option-validator";
 import { RadioGroup } from "@headlessui/react";
+import { useMutation } from "@tanstack/react-query";
 import { ArrowRight, Check, ChevronsUpDown } from "lucide-react";
 import NextImage from "next/image";
+import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { Rnd } from "react-rnd";
-import HandleComponent from "./HandleComponent";
-import { useUploadThing } from "@/lib/uploadthing";
-import { toast } from "@/components/ui/use-toast";
-import { useMutation } from "@tanstack/react-query";
 import { saveConfig as _saveConfig } from "../actions";
-import { useRouter } from "next/navigation";
-import { color } from "framer-motion";
+import HandleComponent from "./HandleComponent";
 
 const DesignConfigurator = ({ configId, imageUrl, imageDimensions }) => {
   const router = useRouter();
